@@ -1,4 +1,4 @@
-@import '@tailwindcss';
+@import 'tailwindcss';
 
 body {
 	margin: 0;
@@ -6,4 +6,8 @@ body {
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	min-height: 100vh;
+	background-color: #0f172a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
