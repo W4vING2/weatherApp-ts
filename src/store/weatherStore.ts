@@ -1,16 +1,17 @@
 import { create } from 'zustand'
+import type { WeatherDataObject } from '../types/weather.types'
 
 interface InitialState {
-	data: object | null
+	data: WeatherDataObject
 }
 
 interface Functions {
-	setData: (data: object) => void
+	setData: (data: WeatherDataObject) => void
 }
 
 interface Store extends InitialState, Functions {}
 
 export const weatherStore = create<Store>()(set => ({
-	data: null,
-	setData: (data: object) => set(() => ({ data })),
+	data: {} as WeatherDataObject,
+	setData: (data: WeatherDataObject) => set(() => ({ data })),
 }))
