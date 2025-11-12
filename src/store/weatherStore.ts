@@ -12,6 +12,11 @@ interface Functions {
 interface Store extends InitialState, Functions {}
 
 export const weatherStore = create<Store>()(set => ({
-	data: {} as WeatherDataObject,
+	data: {
+		name: '',
+		main: { temp: 0, humidity: 0, feels_like: 0 },
+		wind: { speed: 0 },
+		weather: [{ icon: '' }],
+	},
 	setData: (data: WeatherDataObject) => set(() => ({ data })),
 }))

@@ -27,12 +27,12 @@ export default function App() {
 				<h1 className='text-2xl font-bold text-white mb-4'>Weather App</h1>
 				<Input {...register('city', { required: true })} />
 				<Button />
-				{data && data.name ? (
-					<WeatherCard {...data} />
-				) : data.name === 'not found' ? (
+				{data.name === 'not found' ? (
 					<ErrorCard />
-				) : (
+				) : data.name === '' ? (
 					''
+				) : (
+					<WeatherCard {...data} />
 				)}
 			</form>
 		</div>
