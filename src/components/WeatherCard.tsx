@@ -7,7 +7,7 @@ export default function WeatherCard(props: WeatherDataObject) {
 			className='
 				text-center my-6 flex flex-col items-center gap-3
 				bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl
-				border border-white/20 w-[100px] sm:w-[260px]
+				border border-white/20 w-[95%] sm:w-[260px]
 				text-white animate-fade-in-up
 			'
 		>
