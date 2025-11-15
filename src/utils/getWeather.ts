@@ -1,11 +1,13 @@
 import type { WeatherData, WeatherDataObject } from '../types/weather.types'
 
+const API_KEY = import.meta.env.VITE_WEATHER_KEY
+
 export const getWeather = async (
 	data: WeatherData
 ): Promise<WeatherDataObject> => {
 	try {
 		const res = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${data.city}&appid=9304ca1da5ba357cf87e00d55ff74cde&units=metric`
+			`https://api.openweathermap.org/data/2.5/weather?q=${data.city}&appid=${API_KEY}&units=metric`
 		)
 		const json = await res.json()
 		return {
